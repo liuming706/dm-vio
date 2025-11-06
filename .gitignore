@@ -1,0 +1,16 @@
+.idea
+cmake-build-debug
+datasets
+build/*
+saving/*
+output/*
+data/*
+# *.jpg
+# *.png
+*.engine
+.vscode/*
+model/*
+weights/*
+debug/*
+*.so
+*/__pycache__/*

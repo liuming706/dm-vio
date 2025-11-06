@@ -120,22 +120,13 @@ first and seeing if it works.
 ### 3 Running
 Download a TUM-VI sequence (download in the format `Euroc / DSO 512x512`) at https://vision.in.tum.de/data/datasets/visual-inertial-dataset
 
-    bin/dmvio_dataset
-        files=XXXX/datasetXXXX/dso/cam0/images              
-        vignette=XXXX/datasetXXXX/dso/cam0/vignette.png
-        imuFile=XXXX/datasetXXXX/dso/imu.txt
-        gtFile=XXXX/datasetXXXX/dso/gt_imu.csv
-        tsFile=XXXX/datasetXXXX/dso/cam0/times.txt
-        calib=PATH_TO_DMVIO/configs/tumvi_calib/camera02.txt
-        gamma=PATH_TO_DMVIO/configs/tumvi_calib/pcalib.txt
-        imuCalib=PATH_TO_DMVIO/configs/tumvi_calib/camchain.yaml
-        mode=0
-        use16Bit=1
-        preset=0                                                        # use 1 for realtime
-        nogui=0                                                         # use 1 to enable GUI
-        resultsPrefix=/PATH_TO_RESULTS/
-        settingsFile=PATH_TO_DMVIO/configs/tumvi.yaml
-        start=2                                                         
+    bin/dmvio_dataset files=/home/ubt/workspace/datasets/outdoors/dataset-outdoors1_512_16/dso/cam0/images  vignette=/home/ubt/workspace/datasets/outdoors/dataset-outdoors1_512_16/dso/cam0/vignette.png  imuFile=/home/ubt/workspace/datasets/outdoors/dataset-outdoors1_512_16/dso/imu.txt  gtFile=/home/ubt/workspace/datasets/outdoors/dataset-outdoors1_512_16/dso/gt_imu.csv tsFile=/home/ubt/workspace/datasets/outdoors/dataset-outdoors1_512_16/dso/cam0/times.txt calib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi_calib/camera02.txt gamma=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi_calib/pcalib.txt  imuCalib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi_calib/camchain.yaml mode=0  use16Bit=1   preset=0   nogui=0  resultsPrefix=/home/ubt/workspace/noetic_ws/dm_vio_ws/result settingsFile=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi.yaml start=2      
+
+    
+    # unova
+    bin/dmvio_dataset files=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_58_11/mav0/cam0/data tsFile=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_58_11/mav0/cam0/times.txt calib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova_calib/camera02.txt imuCalib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi_calib/camchain.yaml mode=1  use16Bit=0   preset=0   nogui=0  resultsPrefix=/home/ubt/workspace/noetic_ws/dm_vio_ws/result settingsFile=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova.yaml start=2 useimu=1 imuFile=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_58_11/mav0/imu0/imu.txt imuCalib=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_58_11/mav0/camchain.yaml  settingsFile=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova.yaml
+
+    bin/dmvio_dataset files=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_35_35/mav0/cam0/data tsFile=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_35_35/mav0/cam0/times.txt calib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova_calib/camera02.txt imuCalib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/tumvi_calib/camchain.yaml mode=1  use16Bit=0   preset=0   nogui=0  resultsPrefix=/home/ubt/workspace/noetic_ws/dm_vio_ws/result settingsFile=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova.yaml start=2 useimu=1 imuFile=/home/ubt/workspace/datasets/playground/rosa_bag_2025_10_20-16_35_35/mav0/imu0/imu.txt imuCalib=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova_calib/camchain.yaml  settingsFile=/home/ubt/workspace/noetic_ws/dm_vio_ws/src/dm-vio/configs/unova.yaml
 
 Instead of typing this long command you can use the [python tools](https://github.com/lukasvst/dm-vio-python-tools).
 
